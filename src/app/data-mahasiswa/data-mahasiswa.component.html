@@ -1,0 +1,27 @@
+<div class="container">
+    <div class = "row">
+      <div class ="col-md-6"><br>
+        <h2>FORM DATA MAHASISWA</h2><hr>
+        <label class="form-label">NIM</label>
+        <input type="text" class="form-control" [(ngModel)]="nim">
+        <label class="form-label">Nama</label>
+        <input type="text" class="form-control" [(ngModel)]="nama">
+        <label class="form-label">Kelas</label>
+        <input type="text" class="form-control" [(ngModel)] ="kelas">
+        <br>
+        <button class = "btn btn-block btn-primary" (click) ="tambahMhs()">Tambah</button> 
+      </div>
+      <div class ="col-md-6"><br>
+        <h2>DATA MAHASISWA</h2><hr>
+      <div class="card" *ngFor="let mhs of dftrMhs">
+          <div class="card-header">
+            <h3>{{ mhs.nama }}</h3>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ mhs.nim }}</h5>
+            <h6 class="card-text">{{ mhs.kelas }}</h6>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
